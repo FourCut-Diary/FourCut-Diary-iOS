@@ -11,24 +11,27 @@ import Combine
 final class AppleLoginManager: NSObject {
 	
 	private var cancelBag = Set<AnyCancellable>()
+	private var authorizationControllerDelegate: ASAuthorizationControllerCombineDelegate?
 	
 	override init() {
 		super.init()
 	}
 	
 	/// clinck apple login button(create controller to request)
-	func handleAuthorizationAppleIDButtonPress() -> AnyPublisher<ASAuthorization, Never> {
+	func handleAuthorizationAppleIDButtonPress() -> AnyPublisher<ASAuthorization, Error> {
 		let appleIDProvider = ASAuthorizationAppleIDProvider()
 		let request = appleIDProvider.createRequest()
 		request.requestedScopes = [.fullName, .email]
 		
 		let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-		let combineDelegate = ASAuthorizationControllerCombineDelegate()
-		authorizationController.delegate = combineDelegate
-		authorizationController.presentationContextProvider = combineDelegate
+		let delegate = ASAuthorizationControllerCombineDelegate()
+		
+		self.authorizationControllerDelegate = delegate
+		authorizationController.delegate = authorizationControllerDelegate
+		authorizationController.presentationContextProvider = authorizationControllerDelegate
 		authorizationController.performRequests()
 		
-		return combineDelegate.didComplete
+		return delegate.didComplete
 			.eraseToAnyPublisher()
 	}
 }
