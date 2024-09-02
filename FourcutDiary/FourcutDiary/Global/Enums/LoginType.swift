@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+enum LoginType {
+	case kakao
+	case apple
+	
+	var raw: String {
+		return "\(self)".uppercased()
+	}
+}

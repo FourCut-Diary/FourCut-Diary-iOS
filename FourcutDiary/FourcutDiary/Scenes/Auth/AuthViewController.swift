@@ -25,6 +25,14 @@ final class AuthViewController: UIViewController {
 		return button
 	}()
 	
+	private let kakaoLoginButton: UIButton = {
+		let button = UIButton()
+		button.setTitle("카카오 로그인", for: .normal)
+		button.backgroundColor = .systemBrown
+		button.setTitleColor(.black, for: .normal)
+		return button
+	}()
+	
 	init(viewModel: some AuthViewModel) {
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
@@ -45,10 +53,15 @@ final class AuthViewController: UIViewController {
 
 extension AuthViewController {
 	private func layout() {
-		view.addSubview(appleLoginButton)
+		view.addSubviews(appleLoginButton, kakaoLoginButton)
 		
 		appleLoginButton.snp.makeConstraints {
-			$0.center.equalToSuperview()
+			$0.top.equalToSuperview().inset(100)
+			$0.directionalHorizontalEdges.equalToSuperview().inset(10)
+		}
+		
+		kakaoLoginButton.snp.makeConstraints {
+			$0.bottom.equalToSuperview().inset(100)
 			$0.directionalHorizontalEdges.equalToSuperview().inset(10)
 		}
 	}
@@ -72,8 +85,15 @@ extension AuthViewController {
 	private func bindInput() {
 		appleLoginButton.tapPublisher
 			.sink { [weak self] _ in
+				print("click apple")
 				self?.appleLoginButtonTap.send(())
-				print("send")
+			}
+			.store(in: &cancelBag)
+		
+		kakaoLoginButton.tapPublisher
+			.sink { [weak self] _ in
+				print("click kakao")
+				self?.kakaoLoginButtonTap.send(())
 			}
 			.store(in: &cancelBag)
 	}
