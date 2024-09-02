@@ -38,6 +38,7 @@ extension UIControl {
 			self.control = control
 			self.event = event
 			self.subscriber = subscriber
+			control.addTarget(self, action: #selector(eventDidOccur), for: event)
 		}
 		
 		func request(_ demand: Subscribers.Demand) { }
