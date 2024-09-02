@@ -1,5 +1,5 @@
 //
-//  ASAuthorizationControllerProxy.swift
+//  ASAuthorizationControllerCombineDelegate.swift
 //  FourcutDiary
 //
 //  Created by 강윤서 on 8/20/24.
@@ -8,10 +8,10 @@
 import AuthenticationServices
 import Combine
 
-class ASAuthorizationControllerCombineDelegate: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
-	var presentationWindow: UIWindow = UIWindow()
+final class ASAuthorizationControllerCombineDelegate: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
 	
-	lazy var didComplete = PassthroughSubject<ASAuthorization, Never>()
+	var presentationWindow: UIWindow = UIWindow()
+	var didComplete = PassthroughSubject<ASAuthorization, Error>()
 		
 	// MARK: ASAuthorizationControllerDelegate
 	func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
@@ -20,7 +20,7 @@ class ASAuthorizationControllerCombineDelegate: NSObject, ASAuthorizationControl
 	}
 
 	func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-		didComplete.send(completion: .finished)
+		didComplete.send(completion: .failure(error))
 	}
 
 	// MARK: ASAuthorizationControllerPresentationContextProviding
