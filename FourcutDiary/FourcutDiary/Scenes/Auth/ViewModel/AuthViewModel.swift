@@ -16,5 +16,5 @@ struct AuthViewModelInput {
 }
 
 struct AuthViewModelOutput {
-	let signInSuccess: AnyPublisher<String, Never>
+	let loginSuccess: AnyPublisher<String, Never>
 }
