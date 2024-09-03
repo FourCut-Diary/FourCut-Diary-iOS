@@ -10,17 +10,23 @@ import AuthenticationServices
 
 final class AuthViewModelImpl: AuthViewModel {
 	
-	private let appleLoginManager: AppleLoginManager
+	private let authManager: OAuthManager
 	private var cancelBag = Set<AnyCancellable>()
 	
-	init(appleLoginManager: AppleLoginManager) {
-		self.appleLoginManager = appleLoginManager
+	init(authManager: OAuthManager) {
+		self.authManager = authManager
 	}
 	
 	func transform(input: Input) -> Output {
-		let loginSuccess = input.appleLoginButtonTap
-			.flatMap { () -> AnyPublisher<String, Never> in
-				self.loginAPI()
+		let appleLogin = input.appleLoginButtonTap
+			.map{ LoginType.apple }
+		let kakaoLogin = input.kakaoLoginButtonTap
+			.map { LoginType.kakao }
+		
+		let loginSuccess = appleLogin
+			.merge(with: kakaoLogin)
+			.flatMap { loginType -> AnyPublisher<String, Never> in
+				self.authManager.login(type: loginType)
 					.catch { error in
 						return Just("Error: \(error.localizedDescription)")
 							.eraseToAnyPublisher()
@@ -28,26 +34,7 @@ final class AuthViewModelImpl: AuthViewModel {
 					.eraseToAnyPublisher()
 			}
 			.eraseToAnyPublisher()
+		
 		return Output(loginSuccess: loginSuccess)
-	}
-}
-
-/// 추후 파일 분리
-extension AuthViewModelImpl {
-	private func loginAPI() -> Future<String, Error> {
-		return Future<String, Error> { [self] promise in
-			self.appleLoginManager.handleAuthorizationAppleIDButtonPress()
-				.sink { error in
-					print("\(error)")
-				} receiveValue: { authorization in
-					guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential,
-						  let authCode = credential.authorizationCode
-					else { return }
-					let authCodeString = String(data: authCode, encoding: .utf8)!
-					print(authCodeString)
-					promise(.success(authCodeString))
-				}
-				.store(in: &self.cancelBag)
-		}
 	}
 }
