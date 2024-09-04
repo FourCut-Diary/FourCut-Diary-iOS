@@ -9,11 +9,12 @@ import Combine
 
 final class OAuthManagerImpl: OAuthManager {
 	
-	private let appleLoginManager: AppleLoginManager
-//	private let kakaoLoginManager: KakaoLoginMan
+	private let appleLoginManager: AuthService
+	private let kakaoLoginManager: AuthService
 	
-	init(appleLoginManager: AppleLoginManager) {
+	init(appleLoginManager: AuthService, kakaoLoginManager: AuthService) {
 		self.appleLoginManager = appleLoginManager
+		self.kakaoLoginManager = kakaoLoginManager
 	}
 	
 	deinit {
@@ -25,7 +26,7 @@ final class OAuthManagerImpl: OAuthManager {
 		case .apple:
 			return appleLoginManager.authorize().eraseToAnyPublisher()
 		case .kakao:
-			return appleLoginManager.authorize().eraseToAnyPublisher()
+			return kakaoLoginManager.authorize().eraseToAnyPublisher()
 		}
 	}
 }

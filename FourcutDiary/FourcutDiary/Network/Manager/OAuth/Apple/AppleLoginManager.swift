@@ -8,16 +8,16 @@
 import AuthenticationServices
 import Combine
 
-final class AppleLoginManager: NSObject {
+final class AppleLoginManager: AuthService {
 	
 	private var cancelBag = Set<AnyCancellable>()
 	private var authorizationControllerDelegate: ASAuthorizationControllerCombineDelegate?
 	
-	override init() {
-		super.init()
+	func authorize() -> AnyPublisher<String, Error> {
+		return self.login().eraseToAnyPublisher()
 	}
 	
-	func authorize() -> Future<String, Error> {
+	private func login() -> Future<String, Error> {
 		return Future<String, Error> { [self] promise in
 			self.handleAuthorizationAppleIDButtonPress()
 				.sink { error in
