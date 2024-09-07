@@ -26,6 +26,8 @@
 		3B7EFFF02C86219E006C9BEA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7EFFEF2C86219E006C9BEA /* OAuthManager.swift */; };
 		3B7EFFF32C8621EF006C9BEA /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7EFFF22C8621EF006C9BEA /* LoginType.swift */; };
 		3B7EFFF52C8626BA006C9BEA /* OAuthManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7EFFF42C8626BA006C9BEA /* OAuthManagerImpl.swift */; };
+		3BAD27F32C89C72800279C9C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD27F22C89C72800279C9C /* Config.swift */; };
+		3BC681582C8705A400E9E5DB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC681572C8705A400E9E5DB /* AuthService.swift */; };
 		3BDCA9FA2C7DD16800825EAB /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCA9F92C7DD16800825EAB /* KakaoLoginManager.swift */; };
 		3BDCA9FF2C7DD2B400825EAB /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDCA9FE2C7DD2B400825EAB /* KakaoSDK */; };
 		3BDCAA012C7DD2B400825EAB /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDCAA002C7DD2B400825EAB /* KakaoSDKAuth */; };
@@ -73,6 +75,9 @@
 		3B7EFFEF2C86219E006C9BEA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		3B7EFFF22C8621EF006C9BEA /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		3B7EFFF42C8626BA006C9BEA /* OAuthManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManagerImpl.swift; sourceTree = "<group>"; };
+		3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3BAD27F22C89C72800279C9C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3BC681572C8705A400E9E5DB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3BDCA9F92C7DD16800825EAB /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		3BF326952C863DD6008C3190 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +145,7 @@
 		3B5587852C733F1A00EBA61F /* FourcutDiary */ = {
 			isa = PBXGroup;
 			children = (
+				3BAD27F12C89C71600279C9C /* Configuration */,
 				3BDCA9FB2C7DD1A400825EAB /* Network */,
 				3B5587BD2C73505200EBA61F /* Application */,
 				3B5587BE2C73514000EBA61F /* Global */,
@@ -255,6 +261,31 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		3BAD27F12C89C71600279C9C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */,
+				3BAD27F22C89C72800279C9C /* Config.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3BC681552C87059400E9E5DB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3BC681562C87059D00E9E5DB /* Auth */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3BC681562C87059D00E9E5DB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3BC681572C8705A400E9E5DB /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		3BDCA9F72C7DD14E00825EAB /* Apple */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +306,7 @@
 		3BDCA9FB2C7DD1A400825EAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3BC681552C87059400E9E5DB /* Service */,
 				3BDCA9FC2C7DD1B000825EAB /* Manager */,
 			);
 			path = Network;
@@ -440,6 +472,8 @@
 				3B5587CB2C73559A00EBA61F /* AuthViewModelImpl.swift in Sources */,
 				3B5587872C733F1A00EBA61F /* AppDelegate.swift in Sources */,
 				3B5587892C733F1A00EBA61F /* SceneDelegate.swift in Sources */,
+				3BC681582C8705A400E9E5DB /* AuthService.swift in Sources */,
+				3BAD27F32C89C72800279C9C /* Config.swift in Sources */,
 				3B0222702C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift in Sources */,
 				3B5587D42C736F4E00EBA61F /* AppleLoginManager.swift in Sources */,
 			);
@@ -491,6 +525,7 @@
 /* Begin XCBuildConfiguration section */
 		3B5587AB2C733F1C00EBA61F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -554,6 +589,7 @@
 		};
 		3B5587AC2C733F1C00EBA61F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
