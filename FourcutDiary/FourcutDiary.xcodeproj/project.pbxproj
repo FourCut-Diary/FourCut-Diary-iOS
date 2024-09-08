@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0222702C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02226F2C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift */; };
 		3B5587872C733F1A00EBA61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587862C733F1A00EBA61F /* AppDelegate.swift */; };
 		3B5587892C733F1A00EBA61F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587882C733F1A00EBA61F /* SceneDelegate.swift */; };
 		3B55878B2C733F1A00EBA61F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B55878A2C733F1A00EBA61F /* AuthViewController.swift */; };
@@ -22,6 +23,15 @@
 		3B5587CB2C73559A00EBA61F /* AuthViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587CA2C73559A00EBA61F /* AuthViewModelImpl.swift */; };
 		3B5587CE2C7359A000EBA61F /* Combine+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587CD2C7359A000EBA61F /* Combine+.swift */; };
 		3B5587D42C736F4E00EBA61F /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587D32C736F4E00EBA61F /* AppleLoginManager.swift */; };
+		3B7EFFF02C86219E006C9BEA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7EFFEF2C86219E006C9BEA /* OAuthManager.swift */; };
+		3B7EFFF32C8621EF006C9BEA /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7EFFF22C8621EF006C9BEA /* LoginType.swift */; };
+		3B7EFFF52C8626BA006C9BEA /* OAuthManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7EFFF42C8626BA006C9BEA /* OAuthManagerImpl.swift */; };
+		3BAD27F32C89C72800279C9C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD27F22C89C72800279C9C /* Config.swift */; };
+		3BC681582C8705A400E9E5DB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC681572C8705A400E9E5DB /* AuthService.swift */; };
+		3BDCA9FA2C7DD16800825EAB /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCA9F92C7DD16800825EAB /* KakaoLoginManager.swift */; };
+		3BDCA9FF2C7DD2B400825EAB /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDCA9FE2C7DD2B400825EAB /* KakaoSDK */; };
+		3BDCAA012C7DD2B400825EAB /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDCAA002C7DD2B400825EAB /* KakaoSDKAuth */; };
+		3BF326962C863DD6008C3190 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF326952C863DD6008C3190 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B02226F2C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerCombineDelegate.swift; sourceTree = "<group>"; };
 		3B5587832C733F1A00EBA61F /* FourcutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourcutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5587862C733F1A00EBA61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5587882C733F1A00EBA61F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +72,14 @@
 		3B5587CD2C7359A000EBA61F /* Combine+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+.swift"; sourceTree = "<group>"; };
 		3B5587D12C7364AA00EBA61F /* FourcutDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FourcutDiary.entitlements; sourceTree = "<group>"; };
 		3B5587D32C736F4E00EBA61F /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		3B7EFFEF2C86219E006C9BEA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
+		3B7EFFF22C8621EF006C9BEA /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		3B7EFFF42C8626BA006C9BEA /* OAuthManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManagerImpl.swift; sourceTree = "<group>"; };
+		3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3BAD27F22C89C72800279C9C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3BC681572C8705A400E9E5DB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3BDCA9F92C7DD16800825EAB /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
+		3BF326952C863DD6008C3190 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +88,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5587B92C73439C00EBA61F /* SnapKit in Frameworks */,
+				3BDCA9FF2C7DD2B400825EAB /* KakaoSDK in Frameworks */,
+				3BDCAA012C7DD2B400825EAB /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +110,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B02226E2C74980B00E738FF /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				3BDCA9F82C7DD15C00825EAB /* Kakao */,
+				3BDCA9F72C7DD14E00825EAB /* Apple */,
+				3B7EFFEF2C86219E006C9BEA /* OAuthManager.swift */,
+				3B7EFFF42C8626BA006C9BEA /* OAuthManagerImpl.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		3B55877A2C733F1A00EBA61F = {
 			isa = PBXGroup;
 			children = (
+				3B5587D12C7364AA00EBA61F /* FourcutDiary.entitlements */,
 				3B5587852C733F1A00EBA61F /* FourcutDiary */,
 				3B55879C2C733F1C00EBA61F /* FourcutDiaryTests */,
 				3B5587A62C733F1C00EBA61F /* FourcutDiaryUITests */,
@@ -112,7 +145,8 @@
 		3B5587852C733F1A00EBA61F /* FourcutDiary */ = {
 			isa = PBXGroup;
 			children = (
-				3B5587D12C7364AA00EBA61F /* FourcutDiary.entitlements */,
+				3BAD27F12C89C71600279C9C /* Configuration */,
+				3BDCA9FB2C7DD1A400825EAB /* Network */,
 				3B5587BD2C73505200EBA61F /* Application */,
 				3B5587BE2C73514000EBA61F /* Global */,
 				3B5587C52C7353BC00EBA61F /* Scenes */,
@@ -151,6 +185,7 @@
 		3B5587BE2C73514000EBA61F /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				3B7EFFF12C8621D5006C9BEA /* Enums */,
 				3B5587D22C736F3800EBA61F /* Utils */,
 				3B5587CC2C7357E700EBA61F /* Extensions */,
 				3B5587C22C73533F00EBA61F /* Protocols */,
@@ -206,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5587CD2C7359A000EBA61F /* Combine+.swift */,
+				3BF326952C863DD6008C3190 /* UIView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,9 +249,75 @@
 		3B5587D22C736F3800EBA61F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3B5587D32C736F4E00EBA61F /* AppleLoginManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3B7EFFF12C8621D5006C9BEA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				3B7EFFF22C8621EF006C9BEA /* LoginType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		3BAD27F12C89C71600279C9C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */,
+				3BAD27F22C89C72800279C9C /* Config.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3BC681552C87059400E9E5DB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3BC681562C87059D00E9E5DB /* Auth */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3BC681562C87059D00E9E5DB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3BC681572C8705A400E9E5DB /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3BDCA9F72C7DD14E00825EAB /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				3B5587D32C736F4E00EBA61F /* AppleLoginManager.swift */,
+				3B02226F2C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		3BDCA9F82C7DD15C00825EAB /* Kakao */ = {
+			isa = PBXGroup;
+			children = (
+				3BDCA9F92C7DD16800825EAB /* KakaoLoginManager.swift */,
+			);
+			path = Kakao;
+			sourceTree = "<group>";
+		};
+		3BDCA9FB2C7DD1A400825EAB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3BC681552C87059400E9E5DB /* Service */,
+				3BDCA9FC2C7DD1B000825EAB /* Manager */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3BDCA9FC2C7DD1B000825EAB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3B02226E2C74980B00E738FF /* OAuth */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +338,8 @@
 			name = FourcutDiary;
 			packageProductDependencies = (
 				3B5587B82C73439C00EBA61F /* SnapKit */,
+				3BDCA9FE2C7DD2B400825EAB /* KakaoSDK */,
+				3BDCAA002C7DD2B400825EAB /* KakaoSDKAuth */,
 			);
 			productName = FourcutDiary;
 			productReference = 3B5587832C733F1A00EBA61F /* FourcutDiary.app */;
@@ -311,6 +415,7 @@
 			mainGroup = 3B55877A2C733F1A00EBA61F;
 			packageReferences = (
 				3B5587B72C73439C00EBA61F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3BDCA9FD2C7DD2B400825EAB /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = 3B5587842C733F1A00EBA61F /* Products */;
 			projectDirPath = "";
@@ -356,12 +461,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5587C42C73535300EBA61F /* ViewModel.swift in Sources */,
+				3B7EFFF32C8621EF006C9BEA /* LoginType.swift in Sources */,
+				3BF326962C863DD6008C3190 /* UIView+.swift in Sources */,
 				3B5587CE2C7359A000EBA61F /* Combine+.swift in Sources */,
 				3B5587C82C73557200EBA61F /* AuthViewModel.swift in Sources */,
+				3BDCA9FA2C7DD16800825EAB /* KakaoLoginManager.swift in Sources */,
+				3B7EFFF52C8626BA006C9BEA /* OAuthManagerImpl.swift in Sources */,
 				3B55878B2C733F1A00EBA61F /* AuthViewController.swift in Sources */,
+				3B7EFFF02C86219E006C9BEA /* OAuthManager.swift in Sources */,
 				3B5587CB2C73559A00EBA61F /* AuthViewModelImpl.swift in Sources */,
 				3B5587872C733F1A00EBA61F /* AppDelegate.swift in Sources */,
 				3B5587892C733F1A00EBA61F /* SceneDelegate.swift in Sources */,
+				3BC681582C8705A400E9E5DB /* AuthService.swift in Sources */,
+				3BAD27F32C89C72800279C9C /* Config.swift in Sources */,
+				3B0222702C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift in Sources */,
 				3B5587D42C736F4E00EBA61F /* AppleLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +525,7 @@
 /* Begin XCBuildConfiguration section */
 		3B5587AB2C733F1C00EBA61F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -475,6 +589,7 @@
 		};
 		3B5587AC2C733F1C00EBA61F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAD27F02C89C3FD00279C9C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -534,7 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FourcutDiary/FourcutDiary.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FourcutDiary.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
@@ -568,7 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FourcutDiary/FourcutDiary.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FourcutDiary.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
@@ -723,6 +838,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		3BDCA9FD2C7DD2B400825EAB /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -730,6 +853,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B5587B72C73439C00EBA61F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		3BDCA9FE2C7DD2B400825EAB /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BDCA9FD2C7DD2B400825EAB /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		3BDCAA002C7DD2B400825EAB /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BDCA9FD2C7DD2B400825EAB /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
