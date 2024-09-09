@@ -35,6 +35,10 @@
 		3BDCA9FF2C7DD2B400825EAB /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDCA9FE2C7DD2B400825EAB /* KakaoSDK */; };
 		3BDCAA012C7DD2B400825EAB /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDCAA002C7DD2B400825EAB /* KakaoSDKAuth */; };
 		3BF326962C863DD6008C3190 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF326952C863DD6008C3190 /* UIView+.swift */; };
+		3BFDD16F2C8F592300784B5A /* SUIT-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD16E2C8F592300784B5A /* SUIT-Bold.otf */; };
+		3BFDD1732C8F592D00784B5A /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD1702C8F592C00784B5A /* SUIT-SemiBold.otf */; };
+		3BFDD1742C8F592D00784B5A /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD1712C8F592C00784B5A /* SUIT-Medium.otf */; };
+		3BFDD1752C8F592D00784B5A /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD1722C8F592D00784B5A /* SUIT-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		3BC681572C8705A400E9E5DB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3BDCA9F92C7DD16800825EAB /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		3BF326952C863DD6008C3190 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		3BFDD16E2C8F592300784B5A /* SUIT-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.otf"; sourceTree = "<group>"; };
+		3BFDD1702C8F592C00784B5A /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
+		3BFDD1712C8F592C00784B5A /* SUIT-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.otf"; sourceTree = "<group>"; };
+		3BFDD1722C8F592D00784B5A /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +212,7 @@
 		3B5587BF2C73514300EBA61F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3BFDD16D2C8F58ED00784B5A /* Fonts */,
 				3B55878F2C733F1B00EBA61F /* Assets.xcassets */,
 				3B5587C02C73516600EBA61F /* Colors.xcassets */,
 			);
@@ -327,6 +336,17 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		3BFDD16D2C8F58ED00784B5A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3BFDD16E2C8F592300784B5A /* SUIT-Bold.otf */,
+				3BFDD1712C8F592C00784B5A /* SUIT-Medium.otf */,
+				3BFDD1722C8F592D00784B5A /* SUIT-Regular.otf */,
+				3BFDD1702C8F592C00784B5A /* SUIT-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +465,10 @@
 			files = (
 				3B5587C12C73516600EBA61F /* Colors.xcassets in Resources */,
 				3B30D7772C8EFE3F007DC378 /* GoogleService-Info.plist in Resources */,
+				3BFDD1742C8F592D00784B5A /* SUIT-Medium.otf in Resources */,
+				3BFDD1752C8F592D00784B5A /* SUIT-Regular.otf in Resources */,
+				3BFDD16F2C8F592300784B5A /* SUIT-Bold.otf in Resources */,
+				3BFDD1732C8F592D00784B5A /* SUIT-SemiBold.otf in Resources */,
 				3B5587932C733F1B00EBA61F /* LaunchScreen.storyboard in Resources */,
 				3B5587902C733F1B00EBA61F /* Assets.xcassets in Resources */,
 			);
