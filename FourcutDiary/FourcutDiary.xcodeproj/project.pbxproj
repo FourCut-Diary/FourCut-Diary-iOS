@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B0222702C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02226F2C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift */; };
+		3B30D7772C8EFE3F007DC378 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B30D7762C8EFE3F007DC378 /* GoogleService-Info.plist */; };
+		3B30D77D2C8F0B63007DC378 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B30D77C2C8F0B63007DC378 /* FirebaseAnalytics */; };
+		3B30D77F2C8F0B63007DC378 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3B30D77E2C8F0B63007DC378 /* FirebaseMessaging */; };
 		3B5587872C733F1A00EBA61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587862C733F1A00EBA61F /* AppDelegate.swift */; };
 		3B5587892C733F1A00EBA61F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5587882C733F1A00EBA61F /* SceneDelegate.swift */; };
 		3B55878B2C733F1A00EBA61F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B55878A2C733F1A00EBA61F /* AuthViewController.swift */; };
@@ -53,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		3B02226F2C74983000E738FF /* ASAuthorizationControllerCombineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerCombineDelegate.swift; sourceTree = "<group>"; };
+		3B30D7762C8EFE3F007DC378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B5587832C733F1A00EBA61F /* FourcutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourcutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5587862C733F1A00EBA61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5587882C733F1A00EBA61F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			files = (
 				3B5587B92C73439C00EBA61F /* SnapKit in Frameworks */,
 				3BDCA9FF2C7DD2B400825EAB /* KakaoSDK in Frameworks */,
+				3B30D77F2C8F0B63007DC378 /* FirebaseMessaging in Frameworks */,
+				3B30D77D2C8F0B63007DC378 /* FirebaseAnalytics in Frameworks */,
 				3BDCAA012C7DD2B400825EAB /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +180,7 @@
 		3B5587BD2C73505200EBA61F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3B30D7762C8EFE3F007DC378 /* GoogleService-Info.plist */,
 				3B5587912C733F1B00EBA61F /* LaunchScreen.storyboard */,
 				3B5587862C733F1A00EBA61F /* AppDelegate.swift */,
 				3B5587882C733F1A00EBA61F /* SceneDelegate.swift */,
@@ -340,6 +347,8 @@
 				3B5587B82C73439C00EBA61F /* SnapKit */,
 				3BDCA9FE2C7DD2B400825EAB /* KakaoSDK */,
 				3BDCAA002C7DD2B400825EAB /* KakaoSDKAuth */,
+				3B30D77C2C8F0B63007DC378 /* FirebaseAnalytics */,
+				3B30D77E2C8F0B63007DC378 /* FirebaseMessaging */,
 			);
 			productName = FourcutDiary;
 			productReference = 3B5587832C733F1A00EBA61F /* FourcutDiary.app */;
@@ -416,6 +425,7 @@
 			packageReferences = (
 				3B5587B72C73439C00EBA61F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				3BDCA9FD2C7DD2B400825EAB /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				3B30D77B2C8F0B63007DC378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 3B5587842C733F1A00EBA61F /* Products */;
 			projectDirPath = "";
@@ -434,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5587C12C73516600EBA61F /* Colors.xcassets in Resources */,
+				3B30D7772C8EFE3F007DC378 /* GoogleService-Info.plist in Resources */,
 				3B5587932C733F1B00EBA61F /* LaunchScreen.storyboard in Resources */,
 				3B5587902C733F1B00EBA61F /* Assets.xcassets in Resources */,
 			);
@@ -830,6 +841,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B30D77B2C8F0B63007DC378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
 		3B5587B72C73439C00EBA61F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -849,6 +868,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B30D77C2C8F0B63007DC378 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B30D77B2C8F0B63007DC378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3B30D77E2C8F0B63007DC378 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B30D77B2C8F0B63007DC378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		3B5587B82C73439C00EBA61F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B5587B72C73439C00EBA61F /* XCRemoteSwiftPackageReference "SnapKit" */;
