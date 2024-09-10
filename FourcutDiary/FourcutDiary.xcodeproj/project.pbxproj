@@ -39,6 +39,8 @@
 		3BFDD1732C8F592D00784B5A /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD1702C8F592C00784B5A /* SUIT-SemiBold.otf */; };
 		3BFDD1742C8F592D00784B5A /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD1712C8F592C00784B5A /* SUIT-Medium.otf */; };
 		3BFDD1752C8F592D00784B5A /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BFDD1722C8F592D00784B5A /* SUIT-Regular.otf */; };
+		3BFDD1772C8F5CB000784B5A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD1762C8F5CB000784B5A /* Font.swift */; };
+		3BFDD1792C8F623600784B5A /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD1782C8F623600784B5A /* UIFont+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		3BFDD1702C8F592C00784B5A /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
 		3BFDD1712C8F592C00784B5A /* SUIT-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.otf"; sourceTree = "<group>"; };
 		3BFDD1722C8F592D00784B5A /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
+		3BFDD1762C8F5CB000784B5A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		3BFDD1782C8F623600784B5A /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +262,7 @@
 			children = (
 				3B5587CD2C7359A000EBA61F /* Combine+.swift */,
 				3BF326952C863DD6008C3190 /* UIView+.swift */,
+				3BFDD1782C8F623600784B5A /* UIFont+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				3BFDD1712C8F592C00784B5A /* SUIT-Medium.otf */,
 				3BFDD1722C8F592D00784B5A /* SUIT-Regular.otf */,
 				3BFDD1702C8F592C00784B5A /* SUIT-SemiBold.otf */,
+				3BFDD1762C8F5CB000784B5A /* Font.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5587C42C73535300EBA61F /* ViewModel.swift in Sources */,
+				3BFDD1772C8F5CB000784B5A /* Font.swift in Sources */,
 				3B7EFFF32C8621EF006C9BEA /* LoginType.swift in Sources */,
 				3BF326962C863DD6008C3190 /* UIView+.swift in Sources */,
 				3B5587CE2C7359A000EBA61F /* Combine+.swift in Sources */,
@@ -504,6 +511,7 @@
 				3B7EFFF52C8626BA006C9BEA /* OAuthManagerImpl.swift in Sources */,
 				3B55878B2C733F1A00EBA61F /* AuthViewController.swift in Sources */,
 				3B7EFFF02C86219E006C9BEA /* OAuthManager.swift in Sources */,
+				3BFDD1792C8F623600784B5A /* UIFont+.swift in Sources */,
 				3B5587CB2C73559A00EBA61F /* AuthViewModelImpl.swift in Sources */,
 				3B5587872C733F1A00EBA61F /* AppDelegate.swift in Sources */,
 				3B5587892C733F1A00EBA61F /* SceneDelegate.swift in Sources */,
